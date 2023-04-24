@@ -42,7 +42,7 @@ const TourDetails = () => {
 
 		try {
 			if (!user || user === undefined || user === null) {
-				alert("Please sign in");
+				alert("Por favor, registrese");
 			}
 			const reviewObj = {
 				username: user?.username,
@@ -94,7 +94,7 @@ const TourDetails = () => {
 											></i>{" "}
 											{avgRating === 0 ? null : avgRating}
 											{avgRating === 0 ? (
-												"Not rated"
+												"No calificado"
 											) : (
 												<span>({reviews?.length})</span>
 											)}
@@ -151,7 +151,7 @@ const TourDetails = () => {
 											<input
 												type="text"
 												ref={reviewMsgRef}
-												placeholder="share your thoughts"
+												placeholder="Comparte tus pensamientos"
 												required
 											/>
 											<button

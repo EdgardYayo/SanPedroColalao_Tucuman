@@ -36,7 +36,7 @@ const Booking = ({ tour, avgRating }) => {
 
 		try {
 			if (!user || user === undefined || user === null) {
-				return alert("Please sign in");
+				return alert("Por favor, registrese");
 			}
 
 			const res = await fetch(`${BASE_URL}/booking`, {
@@ -81,7 +81,7 @@ const Booking = ({ tour, avgRating }) => {
 					<FormGroup>
 						<input
 							type="text"
-							placeholder="Full Name"
+							placeholder="Nombre completo"
 							id="fullName"
 							required
 							onChange={handleChange}
@@ -90,7 +90,7 @@ const Booking = ({ tour, avgRating }) => {
 					<FormGroup>
 						<input
 							type="tel"
-							placeholder="Phone"
+							placeholder="Teléfono"
 							id="phone"
 							required
 							onChange={handleChange}
@@ -106,7 +106,7 @@ const Booking = ({ tour, avgRating }) => {
 						/>
 						<input
 							type="number"
-							placeholder="Guest"
+							placeholder="Invitado"
 							id="guestSize"
 							required
 							onChange={handleChange}

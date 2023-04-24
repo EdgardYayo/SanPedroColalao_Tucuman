@@ -7,30 +7,30 @@ import logo from "../../assets/images/logo.png";
 const quick__links = [
 	{
 		path: "/home",
-		display: "Home",
+		display: "Inicio",
 	},
 	{
 		path: "/about",
-		display: "About",
+		display: "Nosotros",
 	},
 	{
 		path: "/tours",
-		display: "Tours",
+		display: "Lugares",
 	},
 ];
 
 const quick__links2 = [
 	{
 		path: "/gallery",
-		display: "Gallery",
+		display: "Galeria",
 	},
 	{
 		path: "/login",
-		display: "Login",
+		display: "Iniciar",
 	},
 	{
 		path: "/register",
-		display: "Register",
+		display: "Registrarse",
 	},
 ];
 
@@ -106,7 +106,7 @@ const Footer = () => {
 									</span>
 									Address:
 								</h6>
-								<p className="mb-0">Viet Nam</p>
+								<p className="mb-0">San Pedro de Colalao</p>
 							</ListGroupItem>
 
 							<ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
@@ -117,7 +117,7 @@ const Footer = () => {
 									Email:
 								</h6>
 
-								<p className="mb-0">quannguyen2101999@gmail.com</p>
+								<p className="mb-0">dhannychocolateteamo@gmail.com</p>
 							</ListGroupItem>
 
 							<ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
@@ -128,14 +128,14 @@ const Footer = () => {
 									Phone:
 								</h6>
 
-								<p className="mb-0">+84 123456789</p>
+								<p className="mb-0">+543814454199</p>
 							</ListGroupItem>
 						</ListGroup>
 					</Col>
 
 					<Col lg="12" className="text-center pt-5">
 						<p className="copyright">
-							Copyright {year}, design and develop by QuanBanana. All riights
+							Copyright {year}, design and develop by DhannyPou. All riights
 							reserved.
 						</p>
 					</Col>

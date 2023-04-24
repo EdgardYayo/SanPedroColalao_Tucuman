@@ -22,9 +22,9 @@ const tours = [
         rating: 4.6,
       },
       {
-         name: "jhon doe",
-         rating: 5,
-       },
+        name: "jhon doe",
+        rating: 5,
+      },
     ],
     avgRating: 4.5,
     photo: tourImg01,

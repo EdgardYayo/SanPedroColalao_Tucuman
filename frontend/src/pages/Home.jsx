@@ -8,7 +8,7 @@ import worldImg from "../assets/images/world.png";
 import experienceImg from "../assets/images/experience.png";
 
 import Subtitle from "./../shared/subtitle";
-import SearchBar from "./../shared/SearchBar";
+/* import SearchBar from "./../shared/SearchBar"; */
 import ServiceList from "../services/ServiceList";
 import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGallery";
@@ -25,7 +25,7 @@ const Home = () => {
 						<Col lg="6">
 							<div className="hero__content">
 								<div className="hero__subtitle d-flex align-items-center">
-									<Subtitle subtitle={"Know Before You Go"} />
+									<Subtitle subtitle={"San Pedro de Colalao"} />
 									<img src={worldImg} alt="" />
 								</div>
 								<h1>
@@ -33,10 +33,9 @@ const Home = () => {
 									<span className="hightlight"> recuerdos</span>
 								</h1>
 								<p>
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-									Ullam ipsum nobis asperiores soluta voluptas quas voluptates.
-									Molestiae tempora dignissimos, animi praesentium molestias
-									perferendis porro expedita delectus. Soluta natus porro.
+									San Pedro de Colalao, villa veraniega por excelencia, está
+									enmarcada por los ríos Tipas y Tacanas y cuenta con
+									innumerables atractivos para esperar al turista.
 								</p>
 							</div>
 						</Col>
@@ -57,7 +56,7 @@ const Home = () => {
 							</div>
 						</Col>
 
-						<SearchBar />
+						{/* <SearchBar /> */}
 					</Row>
 				</Container>
 			</section>
@@ -83,7 +82,7 @@ const Home = () => {
 				<Container>
 					<Row>
 						<Col lg="12" className="mb-5">
-							<Subtitle subtitle={"Explore"} />
+							<Subtitle subtitle={"Explorar"} />
 							<h2 className="featured__tour-title">
 								Nuestros tours destacados
 							</h2>
@@ -100,13 +99,15 @@ const Home = () => {
 					<Row>
 						<Col lg="6">
 							<div className="experience__content">
-								<Subtitle subtitle={"Experience"} />
+								<Subtitle subtitle={"Experiencia"} />
 								<h2>
-									With our all experience <br /> Nosotros te serviremos
+									Con toda nuestra experiencia <br /> Nosotros te serviremos
 								</h2>
 								<p>
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-									<br /> Quas aliquam, hic tempora inventore suscipit unde.{" "}
+									Es posible encontrar yacimientos arqueológicos
+									correspondientes a la cultura Ayampitin, Ampajango y
+									Candelaria en todas sus etapas temprana, media y tardía.
+									<br /> Descubrí los imperdibles de este destino{" "}
 								</p>
 							</div>
 
@@ -140,7 +141,7 @@ const Home = () => {
 				<Container>
 					<Row>
 						<Col lg="12">
-							<Subtitle subtitle={"Gallery"} />
+							<Subtitle subtitle={"Galería"} />
 							<h2 className="gallery__title">
 								Visite la galería de tours de nuestros clientes
 							</h2>
@@ -158,7 +159,7 @@ const Home = () => {
 				<Container>
 					<Row>
 						<Col lg="12">
-							<Subtitle subtitle={"Fans Love"} />
+							<Subtitle subtitle={"A los fanáticos les encanta"} />
 							<h2 className="testimonial__title">
 								Lo que nuestros fans dicen de nosotros
 							</h2>

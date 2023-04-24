@@ -15,7 +15,10 @@ const NewsLetter = () => {
 							</h2>
 
 							<div className="newsletter__input">
-								<input type="email" placeholder="Enter your email" />
+								<input
+									type="email"
+									placeholder="Introduce tu correo electrónico"
+								/>
 								<button className="btn newsletter__btn">Suscríbete</button>
 							</div>
 							<p>

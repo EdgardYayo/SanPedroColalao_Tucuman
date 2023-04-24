@@ -23,7 +23,7 @@ const SearchBar = () => {
 			`${BASE_URL}/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`
 		);
 
-		if (!res.ok) alert("Something went wrong");
+		if (!res.ok) alert("Algo salió mal");
 
 		const result = await res.json();
 
@@ -43,11 +43,7 @@ const SearchBar = () => {
 						</span>
 						<div>
 							<h6>Ubicación</h6>
-							<input
-								type="text"
-								placeholder="Where are you going?"
-								ref={locationRef}
-							/>
+							<input type="text" placeholder="¿Adónde vas?" ref={locationRef} />
 						</div>
 					</FormGroup>
 					<FormGroup className="d-flex gap-3 form__group form__group-fast">
@@ -58,7 +54,7 @@ const SearchBar = () => {
 							<h6>Distancia</h6>
 							<input
 								type="number"
-								placeholder="Distance k/m"
+								placeholder="Distancia km/m"
 								ref={distanceRef}
 							/>
 						</div>
