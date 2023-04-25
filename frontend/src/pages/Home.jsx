@@ -3,7 +3,8 @@ import "../styles/home.css";
 import { Container, Row, Col, CardSubtitle } from "reactstrap";
 import heroImg from "../assets/images/hero-img01.jpg";
 import heroImg02 from "../assets/images/hero-img02.jpg";
-import heroVideo from "../assets/images/hero-video.mkv";
+import heroimg03 from "../assets/images/hero-img03.jpg";
+/* import heroVideo from "../assets/images/"; */
 import worldImg from "../assets/images/world.png";
 import experienceImg from "../assets/images/experience.png";
 
@@ -47,7 +48,7 @@ const Home = () => {
 						</Col>
 						<Col lg="2">
 							<div className="hero__img-box hero__video-box mt-4">
-								<video src={heroVideo} alt="" controls />
+								<img src={heroimg03} alt="" controls />
 							</div>
 						</Col>
 						<Col lg="2">
