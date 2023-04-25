@@ -30,7 +30,7 @@ const Home = () => {
 									<img src={worldImg} alt="" />
 								</div>
 								<h1>
-									Viajar abre la puerta a crear{" "}
+									Viajar abre la puerta a crear
 									<span className="hightlight"> recuerdos</span>
 								</h1>
 								<p>
