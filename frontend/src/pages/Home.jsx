@@ -68,7 +68,7 @@ const Home = () => {
 				<Container>
 					<Row>
 						<Col lg="3">
-							<h5 className="services__subtitle">lo que servimos</h5>
+							<h5 className="services__subtitle">lo que servimos </h5>
 							<h2 className="services__title">
 								Ofrecemos nuestros mejores servicios
 							</h2>
