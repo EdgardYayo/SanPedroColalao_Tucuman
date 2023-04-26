@@ -15,6 +15,7 @@ import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
 import NewsLetter from "../shared/Newsletter";
+import Chatbot from "../components/Chatbot/Chatbot";
 
 const Home = () => {
 	return (
@@ -173,6 +174,7 @@ const Home = () => {
 			</section>
 			{/* ========== TESTIMONIAL SECTION END ================== */}
 			<NewsLetter />
+			<Chatbot/>
 		</>
 	);
 };
