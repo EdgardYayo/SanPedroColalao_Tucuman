@@ -1,4 +1,27 @@
 import React from "react";
+import Safe from "react-safe";
+
+const Testimonials = () => {
+	return (
+		<>
+			<div id="disqus_thread"></div>
+			<Safe.script>
+				{(function () {
+					// DON'T EDIT BELOW THIS LINE
+					var d = document,
+						s = d.createElement("script");
+					s.src = "https://san-pedro-de-colalao.disqus.com/embed.js";
+					s.setAttribute("data-timestamp", +new Date());
+					(d.head || d.body).appendChild(s);
+				})()}
+			</Safe.script>
+		</>
+	);
+};
+
+export default Testimonials;
+
+/* import React from "react";
 import Slider from "react-slick";
 import ava01 from "../../assets/images/ava-1.jpg";
 import ava02 from "../../assets/images/ava-2.jpg";
@@ -108,3 +131,4 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
+ */
