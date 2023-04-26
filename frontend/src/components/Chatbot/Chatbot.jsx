@@ -1,32 +1,9 @@
 import React from 'react'
 import ChatBot from 'react-simple-chatbot';
 import { ThemeProvider } from 'styled-components';
+import { steps } from '../../utils/stepsChatbot';
 
 function Chatbot() {
-
-    const steps = [
-        {
-            id: '0',
-            message: 'Hola, ¿Como te llamas?',
-            trigger: 1
-        },
-        {
-            id: '1',
-            user: true,
-            trigger: 2
-        },
-        {
-            id:'2',
-            message: 'Hola {previousValue}, Bienvenida a San Pedro Colalao',
-            trigger: '3'
-        },
-        {
-            id:'3',
-            message: 'Esperemos te la pases genial',
-            end: true
-        },
-
-    ]
 
     const theme = {
         background:'#f5f5f5',
@@ -48,6 +25,7 @@ function Chatbot() {
     <div>
         <ThemeProvider theme={theme}>
         <ChatBot 
+            speechSynthesis={{ enable: false, lang: 'es' }}
             headerTitle="Guia Virtual de San Pedro Colalao"
             steps={steps}
             {...config}
