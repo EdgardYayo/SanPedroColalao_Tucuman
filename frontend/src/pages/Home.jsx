@@ -7,10 +7,11 @@ import heroimg03 from "../assets/images/hero-img03.jpg";
 /* import heroVideo from "../assets/images/"; */
 import worldImg from "../assets/images/world.png";
 import experienceImg from "../assets/images/experience.png";
+import Events from "../components/Events/Events";
 
 import Subtitle from "./../shared/subtitle";
-import SearchBar from "./../shared/SearchBar";
-import ServiceList from "../services/ServiceList";
+/* import SearchBar from "./../shared/SearchBar";
+import ServiceList from "../services/ServiceList"; */
 import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
@@ -57,14 +58,16 @@ const Home = () => {
 							</div>
 						</Col>
 
-						<SearchBar />
+						{/* 	<SearchBar /> */}
 					</Row>
 				</Container>
 			</section>
 			{/* ============================================================== */}
 
+			<Events />
+
 			{/* ==================== HERO SECTION START ====================== */}
-			<section>
+			{/* <section>
 				<Container>
 					<Row>
 						<Col lg="3">
@@ -76,7 +79,7 @@ const Home = () => {
 						<ServiceList />
 					</Row>
 				</Container>
-			</section>
+			</section> */}
 
 			{/* ========== FEATURED TOUR SECTION START ========== */}
 			<section>
