@@ -3,7 +3,7 @@ import "../styles/tour-details.css";
 // import tourData from '../assets/data/tours'
 import { Container, Row, Col, Form, ListGroup } from "reactstrap";
 import { useParams } from "react-router-dom";
-import calculateAvgRating from "../utils/avgRating";
+// import calculateAvgRating from "../utils/avgRating";
 import avatar from "../assets/images/avatar.jpg";
 import Booking from "../components/Booking/Booking";
 import Newsletter from "../shared/Newsletter";
@@ -23,51 +23,47 @@ const TourDetails = () => {
 	const {
 		photo,
 		title,
-		desc,
-		price,
-		reviews,
-		city,
 		address,
-		distance,
-		maxGroupSize,
+		category,
+		desc
 	} = tour;
 
-	const { totalRating, avgRating } = calculateAvgRating(reviews);
+	//const { totalRating, avgRating } = calculateAvgRating(reviews);
 
 	const options = { day: "numeric", month: "long", year: "numeric" };
 
-	const submitHandler = async (e) => {
-		e.preventDefault();
-		const reviewText = reviewMsgRef.current.value;
+	// const submitHandler = async (e) => {
+	// 	e.preventDefault();
+	// 	const reviewText = reviewMsgRef.current.value;
 
-		try {
-			if (!user || user === undefined || user === null) {
-				alert("Por favor, registrese");
-			}
-			const reviewObj = {
-				username: user?.username,
-				reviewText,
-				rating: tourRating,
-			};
+	// 	try {
+	// 		if (!user || user === undefined || user === null) {
+	// 			alert("Por favor, registrese");
+	// 		}
+	// 		const reviewObj = {
+	// 			username: user?.username,
+	// 			reviewText,
+	// 			rating: tourRating,
+	// 		};
 
-			const res = await fetch(`${BASE_URL}/review/${id}`, {
-				method: "post",
-				headers: {
-					"content-type": "application/json",
-				},
-				credentials: "include",
-				body: JSON.stringify(reviewObj),
-			});
+	// 		const res = await fetch(`${BASE_URL}/review/${id}`, {
+	// 			method: "post",
+	// 			headers: {
+	// 				"content-type": "application/json",
+	// 			},
+	// 			credentials: "include",
+	// 			body: JSON.stringify(reviewObj),
+	// 		});
 
-			const result = await res.json();
-			if (!res.ok) {
-				return alert(result.message);
-			}
-			alert(result.message);
-		} catch (error) {
-			alert(error.message);
-		}
-	};
+	// 		const result = await res.json();
+	// 		if (!res.ok) {
+	// 			return alert(result.message);
+	// 		}
+	// 		alert(result.message);
+	// 	} catch (error) {
+	// 		alert(error.message);
+	// 	}
+	// };
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -87,7 +83,7 @@ const TourDetails = () => {
 								<div className="tour__info">
 									<h2>{title}</h2>
 									<div className="d-flex align-items-center gap-5">
-										<span className="tour__rating d-flex align-items-center gap-1">
+										{/* <span className="tour__rating d-flex align-items-center gap-1">
 											<i
 												class="ri-star-fill"
 												style={{ color: "var(--secondary-color)" }}
@@ -98,13 +94,13 @@ const TourDetails = () => {
 											) : (
 												<span>({reviews?.length})</span>
 											)}
-										</span>
+										</span> */}
 
 										<span>
 											<i class="ri-map-pin-fill"></i> {address}
 										</span>
 									</div>
-
+{/* 
 									<div className="tour__extra-details">
 										<span>
 											<i class="ri-map-pin-2-line"></i> {city}
@@ -119,14 +115,14 @@ const TourDetails = () => {
 										<span>
 											<i class="ri-group-line"></i> {maxGroupSize} gente
 										</span>
-									</div>
+									</div> */}
 									<h5>Descripción</h5>
 									<p>{desc}</p>
 								</div>
 
 								{/* ============ TOUR REVIEWS SECTION START ============ */}
-								<div className="tour__reviews mt-4">
-									<h4>Reseñas ({reviews?.length} reviews)</h4>
+								{/* <div className="tour__reviews mt-4"> */}
+									{/* <h4>Reseñas ({reviews?.length} reviews)</h4>
 
 									<Form onSubmit={submitHandler}>
 										<div className="d-flex align-items-center gap-3 mb-4 rating__group">
@@ -193,14 +189,14 @@ const TourDetails = () => {
 									</ListGroup>
 								</div>
 								{/* ============ TOUR REVIEWS SECTION END ============== */}
-							</div>
+							 </div>
 						</Col>
-
+{/* 
 						<Col lg="4">
 							<Booking tour={tour} avgRating={avgRating} />
-						</Col>
+						</Col>  */}
 					</Row>
-				)}
+				)} 
 			</Container>
 			<Newsletter />
 		</section>

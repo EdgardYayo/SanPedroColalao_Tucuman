@@ -2,34 +2,34 @@ import React from "react";
 import { Card, CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./tour-card.css";
-import calculateAvgRating from "../utils/avgRating";
+// import calculateAvgRating from "../utils/avgRating";
 
 const TourCard = ({ tour }) => {
-	const { _id, title, city, photo, price, featured, reviews } = tour;
+	const { _id, title, photo, category, address } = tour;
 
-	const { totalRating, avgRating } = calculateAvgRating(reviews);
+	//const { totalRating, avgRating } = calculateAvgRating(reviews);
 
 	return (
 		<div className="tour__card">
 			<Card>
 				<div className="tour__img">
 					<img src={photo} alt="tour-img" />
-					{featured && <span>Presentado</span>}
+					{/* {featured && <span>Presentado</span>} */}
 				</div>
 
 				<CardBody>
 					<div className="card__top d-flex align-items-center justify-content-between">
 						<span className="tour__location d-flex align-items-center gap-1">
-							<i class="ri-map-pin-line"></i> {city}
+							<i class="ri-map-pin-line"></i> {address}
 						</span>
-						<span className="tour__rating d-flex align-items-center gap-1">
+						{/* <span className="tour__rating d-flex align-items-center gap-1">
 							<i class="ri-star-fill"></i> {avgRating === 0 ? null : avgRating}
 							{totalRating === 0 ? (
 								"No calificado"
 							) : (
 								<span>({reviews.length})</span>
 							)}
-						</span>
+						</span> */}
 					</div>
 
 					<h5 className="tour__title">
@@ -38,15 +38,15 @@ const TourCard = ({ tour }) => {
 
 					<div className="card__bottom d-flex align-items-center justify-content-between mt-3">
 						<h5>
-							${price} <span> /por persona</span>
+							{category}
 						</h5>
 
 						{/* <button className=' booking__btn'>
                      <Link to={`/tours/${_id}`}>Book Now</Link>
                   </button> */}
-						<Link to={`/tours/${_id}`}>
+						{/* <Link to={`/tours/${_id}`}>
 							<button className=" booking__btn">Reservar ahora</button>
-						</Link>
+						</Link> */}
 					</div>
 				</CardBody>
 			</Card>

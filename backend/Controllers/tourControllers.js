@@ -7,9 +7,9 @@ export const createTour = async (req, res) => {
    try {
       const savedTour = await newTour.save()
 
-      res.status(200).json({ success: true, message: 'Successfully created', data: savedTour })
+      res.status(200).json({ success: true, message: 'Creado con Exito!!', data: savedTour })
    } catch (error) {
-      res.status(500).json({ success: true, message: 'Failed to create. Try again!' })
+      res.status(500).json({ success: true, message: 'Se fallo en crear el tour, intenta de nuevo!' })
    }
 }
 
@@ -22,9 +22,9 @@ export const updateTour = async (req, res) => {
          $set: req.body
       }, { new: true })
 
-      res.status(200).json({ success: true, message: 'Successfully updated', data: updatedTour })
+      res.status(200).json({ success: true, message: 'Actualizado con exito!', data: updatedTour })
    } catch (error) {
-      res.status(500).json({ success: false, message: 'Failed to update' })
+      res.status(500).json({ success: false, message: 'Fallo en actualizar' })
    }
 }
 
@@ -35,9 +35,9 @@ export const deleteTour = async (req, res) => {
    try {
       await Tour.findByIdAndDelete(id)
 
-      res.status(200).json({ success: true, message: 'Successfully deleted' })
+      res.status(200).json({ success: true, message: 'Se borro exitosamente' })
    } catch (error) {
-      res.status(500).json({ success: false, message: 'Failed to delete' })
+      res.status(500).json({ success: false, message: 'Fallo en borrarse' })
    }
 }
 
