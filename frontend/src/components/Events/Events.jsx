@@ -3,9 +3,9 @@ import { Container, Row, Col } from "reactstrap";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import heroImg from "../../assets/images/hero-img01.jpg";
-import heroImg02 from "../../assets/images/hero-img02.jpg";
-import heroimg03 from "../../assets/images/hero-img03.jpg";
+import heroImg from "../../assets/images/hero-img01.png";
+import heroImg02 from "../../assets/images/hero-img02.png";
+import heroimg03 from "../../assets/images/hero-img03.png";
 
 // Import Swiper styles
 import "swiper/css";
