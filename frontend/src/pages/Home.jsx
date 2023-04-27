@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/home.css";
 import { Container, Row, Col, CardSubtitle } from "reactstrap";
-import heroImg from "../assets/images/hero-img01.jpg";
-import heroImg02 from "../assets/images/hero-img02.jpg";
-import heroimg03 from "../assets/images/hero-img03.jpg";
+import heroImg from "../assets/images/hero-img01.png";
+import heroImg02 from "../assets/images/hero-img02.png";
+import heroimg03 from "../assets/images/hero-img03.png";
 /* import heroVideo from "../assets/images/"; */
 import worldImg from "../assets/images/world.png";
 import experienceImg from "../assets/images/experience.png";
@@ -177,7 +177,7 @@ const Home = () => {
 			</section>
 			{/* ========== TESTIMONIAL SECTION END ================== */}
 			<NewsLetter />
-			<Chatbot/>
+			<Chatbot />
 		</>
 	);
 };
