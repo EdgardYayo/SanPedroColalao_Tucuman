@@ -20,13 +20,7 @@ const TourDetails = () => {
 	// fetch data from database
 	const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`);
 
-	const {
-		photo,
-		title,
-		address,
-		category,
-		desc
-	} = tour;
+	const { photo, title, address, category, desc } = tour;
 
 	//const { totalRating, avgRating } = calculateAvgRating(reviews);
 
@@ -78,7 +72,7 @@ const TourDetails = () => {
 					<Row>
 						<Col lg="8">
 							<div className="tour__content">
-								<img src={photo} alt="" />
+								<img src={photo} alt="foto-lugar" />
 
 								<div className="tour__info">
 									<h2>{title}</h2>
@@ -100,7 +94,7 @@ const TourDetails = () => {
 											<i class="ri-map-pin-fill"></i> {address}
 										</span>
 									</div>
-{/* 
+									{/* 
 									<div className="tour__extra-details">
 										<span>
 											<i class="ri-map-pin-2-line"></i> {city}
@@ -122,7 +116,7 @@ const TourDetails = () => {
 
 								{/* ============ TOUR REVIEWS SECTION START ============ */}
 								{/* <div className="tour__reviews mt-4"> */}
-									{/* <h4>Reseñas ({reviews?.length} reviews)</h4>
+								{/* <h4>Reseñas ({reviews?.length} reviews)</h4>
 
 									<Form onSubmit={submitHandler}>
 										<div className="d-flex align-items-center gap-3 mb-4 rating__group">
@@ -189,14 +183,14 @@ const TourDetails = () => {
 									</ListGroup>
 								</div>
 								{/* ============ TOUR REVIEWS SECTION END ============== */}
-							 </div>
+							</div>
 						</Col>
-{/* 
+						{/* 
 						<Col lg="4">
 							<Booking tour={tour} avgRating={avgRating} />
 						</Col>  */}
 					</Row>
-				)} 
+				)}
 			</Container>
 			<Newsletter />
 		</section>

@@ -94,7 +94,7 @@ export const getFeaturedTour = async (req, res) => {
    //console.log(page)
 
    try {
-      const tours = await Tour.find({ featured: true }).populate('reviews').limit(8)
+      const tours = await Tour.find({}).limit(8)
 
       res.status(200).json({ success: true, message: 'Successfully', data: tours })
    } catch (error) {
@@ -103,12 +103,12 @@ export const getFeaturedTour = async (req, res) => {
 }
 
 //Get tour count 
-export const getTourCount = async(req,res) => {
+export const getTourCount = async (req, res) => {
    try {
       const tourCount = await Tour.estimatedDocumentCount()
 
-      res.status(200).json({success:true, data:tourCount})
+      res.status(200).json({ success: true, data: tourCount })
    } catch (error) {
-      res.status(500).json({success:false, message: "Failed to fetch"})
+      res.status(500).json({ success: false, message: "Failed to fetch" })
    }
 }
