@@ -19,12 +19,13 @@ const TourDetails = () => {
 
 	// fetch data from database
 	const { data: tour, loading, error } = useFetch(`${BASE_URL}/tours/${id}`);
+	console.log(tour);
 
-	const { photo, title, address, category, desc } = tour;
+	// const { photo, title, address, category, desc } = tour;
 
 	//const { totalRating, avgRating } = calculateAvgRating(reviews);
 
-	const options = { day: "numeric", month: "long", year: "numeric" };
+	// const options = { day: "numeric", month: "long", year: "numeric" };
 
 	// const submitHandler = async (e) => {
 	// 	e.preventDefault();
@@ -72,10 +73,10 @@ const TourDetails = () => {
 					<Row>
 						<Col lg="8">
 							<div className="tour__content">
-								<img src={photo} alt="foto-lugar" />
+								<img src={tour.photo} alt="foto-lugar" />
 
 								<div className="tour__info">
-									<h2>{title}</h2>
+									<h2>{tour.title}</h2>
 									<div className="d-flex align-items-center gap-5">
 										{/* <span className="tour__rating d-flex align-items-center gap-1">
 											<i
@@ -91,7 +92,7 @@ const TourDetails = () => {
 										</span> */}
 
 										<span>
-											<i class="ri-map-pin-fill"></i> {address}
+											<i class="ri-map-pin-fill"></i> {tour.address}
 										</span>
 									</div>
 									{/* 
@@ -111,7 +112,9 @@ const TourDetails = () => {
 										</span>
 									</div> */}
 									<h5>Descripción</h5>
-									<p>{desc}</p>
+									<p>{tour.desc}</p>
+									<h5>Categorias</h5>
+									<p>{tour.category}</p>
 								</div>
 
 								{/* ============ TOUR REVIEWS SECTION START ============ */}
