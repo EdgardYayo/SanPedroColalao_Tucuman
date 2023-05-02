@@ -21,8 +21,8 @@ const quick__links = [
 
 const quick__links2 = [
 	{
-		path: "/gallery",
-		display: "Galeria",
+		path: "/news",
+		display: "Noticias",
 	},
 	{
 		path: "/login",
@@ -49,7 +49,7 @@ const Footer = () => {
 								Commodi, enim.
 							</p>
 							<div className="social__link d-flex align-items-center gap-4">
-								<span>
+								{/* <span>
 									<Link to="#">
 										<i class="ri-youtube-line"></i>
 									</Link>
@@ -58,16 +58,22 @@ const Footer = () => {
 									<Link to="#">
 										<i class="ri-github-fill"></i>
 									</Link>
-								</span>
+								</span> */}
 								<span>
-									<Link to="#">
+									<a
+										href="https://www.facebook.com/profile.php?id=100091955539406"
+										target="_blank"
+									>
 										<i class="ri-facebook-circle-line"></i>
-									</Link>
+									</a>
 								</span>
 								<span>
-									<Link to="#">
+									<a
+										href="https://www.instagram.com/sanpedrodecolalaotucuman/"
+										target="_blank"
+									>
 										<i class="ri-instagram-line"></i>
-									</Link>
+									</a>
 								</span>
 							</div>
 						</div>
@@ -117,10 +123,10 @@ const Footer = () => {
 									Email:
 								</h6>
 
-								<p className="mb-0">dhannychocolateteamo@gmail.com</p>
+								<p className="mb-0">sanpedrodecolalao.tucuman@gmail.com</p>
 							</ListGroupItem>
 
-							<ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
+							{/* <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
 								<h6 className="mb-0 d-flex align-items-center gap-2">
 									<span>
 										<i class="ri-phone-fill"></i>
@@ -129,14 +135,14 @@ const Footer = () => {
 								</h6>
 
 								<p className="mb-0">+543814454199</p>
-							</ListGroupItem>
+							</ListGroupItem> */}
 						</ListGroup>
 					</Col>
 
 					<Col lg="12" className="text-center pt-5">
 						<p className="copyright">
-							Copyright {year}, design and develop by DhannyPou. All riights
-							reserved.
+							Copyright {year}, design and develop by TechSiteMasters. All
+							rights reserved.
 						</p>
 					</Col>
 				</Row>

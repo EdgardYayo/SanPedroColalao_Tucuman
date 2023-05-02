@@ -17,6 +17,7 @@ import MasonryImagesGallery from "../components/Image-gallery/MasonryImagesGalle
 import Testimonials from "../components/Testimonial/Testimonials";
 import NewsLetter from "../shared/Newsletter";
 import Chatbot from "../components/Chatbot/Chatbot";
+import Facebook from "../components/Redes/Facebook";
 
 const Home = () => {
 	return (
@@ -176,6 +177,23 @@ const Home = () => {
 				</Container>
 			</section>
 			{/* ========== TESTIMONIAL SECTION END ================== */}
+
+			{/* ===============  REDES SOCIALES  ================= */}
+			<section>
+				<Container>
+					<Row>
+						<Col lg="12">
+							<Subtitle subtitle={"Redes Sociales"} />
+							<h2 className="testimonial__title">
+								Facebook San Pedro de Colalao
+							</h2>
+						</Col>
+						<Col lg="12">
+							<Facebook />
+						</Col>
+					</Row>
+				</Container>
+			</section>
 			<NewsLetter />
 			<Chatbot />
 		</>
