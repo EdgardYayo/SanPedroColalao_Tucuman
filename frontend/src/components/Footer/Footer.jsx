@@ -44,10 +44,7 @@ const Footer = () => {
 					<Col lg="3">
 						<div className="logo">
 							<img src={logo} alt="" />
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit.
-								Commodi, enim.
-							</p>
+							<p>"La Sucursal de Cielo"</p>
 							<div className="social__link d-flex align-items-center gap-4">
 								{/* <span>
 									<Link to="#">
@@ -112,7 +109,9 @@ const Footer = () => {
 									</span>
 									Address:
 								</h6>
-								<p className="mb-0">San Pedro de Colalao</p>
+								<p className="mb-0 imail" style={{ fontSize: "0.8rem" }}>
+									San Pedro de Colalao
+								</p>
 							</ListGroupItem>
 
 							<ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
@@ -123,7 +122,9 @@ const Footer = () => {
 									Email:
 								</h6>
 
-								<p className="mb-0">sanpedrodecolalao.tucuman@gmail.com</p>
+								<p className="mb-0 imail" style={{ fontSize: "0.8rem" }}>
+									sanpedrodecolalao.tucuman@gmail.com
+								</p>
 							</ListGroupItem>
 
 							{/* <ListGroupItem className="ps-0 border-0 d-flex align-items-center gap-3">
