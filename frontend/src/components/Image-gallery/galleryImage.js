@@ -5,7 +5,7 @@ import galleryImg04 from '../../assets/images/gallery-04.png'
 import galleryImg05 from '../../assets/images/gallery-05.png'
 import galleryImg06 from '../../assets/images/gallery-06.png'
 import galleryImg07 from '../../assets/images/gallery-07.png'
-import galleryImg08 from '../../assets/images/gallery-02.png'
+import galleryImg08 from '../../assets/images/gallery-08.jpg'
 
 
 const galleryImages = [
