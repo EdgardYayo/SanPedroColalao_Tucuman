@@ -118,16 +118,16 @@ const Home = () => {
 
 							<div className="counter__wrapper d-flex align-items-center gap-5">
 								<div className="counter__box">
-									<span>12k+</span>
-									<h6>Viaje exitoso</h6>
+									<span style={{ width: "75px"}}>TUC088</span>
+									<h6>Codigo de Municipio</h6>
 								</div>
 								<div className="counter__box">
-									<span>2k+</span>
-									<h6>Clientes regulares</h6>
+									<span>4,396</span>
+									<h6>Numero de Habitantes</h6>
 								</div>
 								<div className="counter__box">
-									<span>15</span>
-									<h6>año de experiencia</h6>
+									<span>1814</span>
+									<h6>Año de Fundacion</h6>
 								</div>
 							</div>
 						</Col>
