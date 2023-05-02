@@ -18,6 +18,10 @@ const nav__links = [
 		path: "/tours",
 		display: "Lugares",
 	},
+	{
+		path:"/news",
+		display: "Noticias"
+	},
 ];
 
 const Header = () => {
