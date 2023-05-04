@@ -22,7 +22,7 @@ function Chatbot() {
     };
 
     const [messages, setMessages] = useState([])
-    const chatbotRef = useRef(null);
+    // const chatbotRef = useRef(null);
 
     const handleEnd = ({ steps, values }) => {
         const lastMessage = messages[messages.length - 1];
@@ -34,20 +34,15 @@ function Chatbot() {
                     trigger: 'repeat',
                 },
             ]);
-            chatbotRef.current.setStep(chatbotRef.current.steps[0].id);
+            //chatbotRef.current.setStep(chatbotRef.current.steps[0].id);
         }
     };
 
   return (
     <div>
-        <ThemeProvider theme={theme}>
-            {/* <Steps
-                {...config}
-                steps = {steps} 
-                {...{handleEnd, messages}}
-            /> */}
+        <ThemeProvider theme={theme}>         
         <ChatBot 
-            ref={chatbotRef}
+            //ref={chatbotRef}
             speechSynthesis={{ enable: false, lang: 'es' }}
             headerTitle="Guia Virtual de San Pedro Colalao"
             steps={steps}

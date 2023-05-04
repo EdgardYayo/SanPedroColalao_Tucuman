@@ -37,7 +37,6 @@
 //         end: true,
 //     },
 
-import Tour from "../../src/pages/Tours";
 
 // ]
 
@@ -80,50 +79,71 @@ export const steps = [
     },
     {
         id: 'restaurant-yes',
-        message: '¡Genial! ¿Qué tipo de lugar te gustaría visitar?',
-        trigger: 'restaurant-type-options',
+        message: '¡Genial! ¿Te puedo recomiendar la Cervezeria Herr Vilem?',
+        trigger: 'cervezeria-options',
         delay: 500,
     },
     {
-        id: 'restaurant-type-options',
+        id: 'cervezeria-options',
         options: [
             {
-                value: 'restaurant',
-                label: 'Restaurant',
-                trigger: 'restaurant-list',
+                value: 'si',
+                label: 'Si',
+                trigger: 'web-vilem',
             },
             {
-                value: 'hotel',
-                label: 'Hotel',
-                trigger: 'hotel-list',
-            },
-            {
-                value: 'bar',
-                label: 'Bar',
-                trigger: 'bar-list',
+                value: 'no',
+                label: 'No',
+                trigger: 'other-options',
             },
         ],
     },
     {
-        id: 'restaurant-list',
-        component: <Tour />,
-        waitAction: true, // Esperamos a que el usuario seleccione un lugar antes de pasar al siguiente nodo.
-        trigger: 'restaurant-options', // Volvemos a la pregunta original para que el usuario pueda hacer otra selección si lo desea.
-        asMessage: true, // El componente RestaurantList debe mostrarse como un mensaje.
+            id: 'web-vilem',
+            message: 'Visita la pagina web offical de la Cervezeria Herr Vilem herrvilem.com',
+            end: true,
     },
     {
-        id: 'hotel-list',
-        component: <Tour/>,
-        waitAction: true,
-        trigger: 'restaurant-options',
-        asMessage: true,
+        
+        id: 'other-options',
+        message: "Aqui listamos algunos otros de los mejores lugares para visitar",
+        trigger: 'other-places',
+        delay: 500
     },
     {
-        id: 'bar-list',
-        component: <Tour />,
-        waitAction: true,
-        trigger: 'restaurant-options',
-        asMessage: true,
+        id:'other-places',
+        options: [
+            {
+                value: 'Bar el Chavo',
+                label: 'Bar el Chavo',
+                trigger: 'end-places',
+            },
+            {
+                value: 'Restaurante el Cardon',
+                label: 'Restaurante el Cardon',
+                trigger: 'end-places',
+            },
+            {
+                value: 'Plaza Norte',
+                label: 'Plaza Norte',
+                trigger: 'end-places',
+            },
+            {
+                value: 'Aqui me quedo',
+                label: 'Aqui me quedo',
+                trigger: 'end-places',
+            },
+            {
+                value: 'Hotel y Restaurant La Casona',
+                label: 'Hotel y Restaurant La Casona',
+                trigger: 'end-places',
+            },
+        ]
+    },
+    {
+        id:'end-places',
+        message: 'Esperemos que disfrutes de {previousValue} en San Pedro Colalao',
+        end: true,
     },
     {
         id: 'end-message',
