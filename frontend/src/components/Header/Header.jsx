@@ -36,6 +36,7 @@ const Header = () => {
 	const logout = () => {
 		dispatch({ type: "LOGOUT" });
 		navigate("/");
+		setAdmin(false);
 	};
 
 	const adminIsOnline = () => {
@@ -62,7 +63,7 @@ const Header = () => {
 		adminIsOnline();
 
 		return window.removeEventListener("scroll", stickyHeaderFunc);
-	});
+	}, [admin, user]);
 
 	const toggleMenu = () => menuRef.current.classList.toggle("show__menu");
 

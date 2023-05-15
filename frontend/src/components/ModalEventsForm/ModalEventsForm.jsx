@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import  ReactDom from 'react-dom';
 import styles from './ModalEventsForm.module.css';
 import { Button, Container } from 'reactstrap';
 import { BASE_URL } from '../../utils/config';
@@ -74,7 +75,7 @@ const ModalEventsForm = ({ admin }) => {
         <Container>
             <button className={styles.btn} onClick={openModal}>Crear Eventos</button>
 
-            {isOpen && (
+            {isOpen && ReactDom.createPortal(
                 <div className={styles.modal}>
                     <div className={styles.modalContent}>
                         <h2>Crea un Evento</h2>
@@ -115,7 +116,7 @@ const ModalEventsForm = ({ admin }) => {
                 <p>No hay eventos</p>
             )}
                     </div>
-                </div> )}
+                </div>, document.getElementById("portal") )}
         </Container>
     );
 };
