@@ -1,19 +1,35 @@
-import React from 'react'
-import useFetch from '../../hooks/useFetch';
+import React, { useRef, useEffect, useState } from 'react'
+// import useFetch from '../../hooks/useFetch';
 import { BASE_URL } from '../../utils/config';
 import { Container } from "reactstrap";
 import style from './Events.module.css';
+import axios from 'axios';
 
 const Events = () => {
 
-	const events = useFetch(`${BASE_URL}/events`);
+	const [data, setData] = useState([])
+	// const events = useFetch(`${BASE_URL}/events`);
+	// console.log(events.error, events.loading);
+
+	
+	useEffect(() => {
+		const getAxios = async () => {
+			const res = await axios.get(`${BASE_URL}/events`)
+			if(res){
+				setData(res.data.data)
+			}
+		}
+		getAxios();
+		
+	  }, []);
+
 
   return (
 	<Container>
 		<h1 className={style.title}>Proximos Eventos</h1>
 		<ul className={style.eventContainer}>
 			{
-				!events.error && events.data.map(e => {
+				data.length > 0 ? data.map(e => {
 					return ( <li key={e._id} className={style.listContainer}>
 						<p className={style.eventName}>🎊{e.name}🎊</p>
 						<p><i>Lugar:</i> {e.location}</p>
@@ -22,7 +38,9 @@ const Events = () => {
 						<p><i>Categoria:</i> {e.category}</p>
 						<img className={style.eventImage} src={e.image} alt={e.name} />
 					</li> )
-				})
+				}) :( <li>
+						<p style={{ fontWeight:"bold" }}>No hay eventos disponibles</p>
+					</li> )
 			}
 
 		</ul>

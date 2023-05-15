@@ -6,6 +6,7 @@
 .eventContainer {
   display: grid;
   grid-template-columns: repeat(2, minmax(50%, 1fr));
+  row-gap: 10px;
   place-content: center;
   place-items: center;
 }
@@ -23,6 +24,8 @@
 }
 
 .listContainer {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     background-color: var(--secondary-color);
     padding: 25px;
@@ -36,6 +39,7 @@
     background-color: var(--primary-color);
     transform: scale(1.05);
 }
+
 
 
 @media (max-width: 900px) {

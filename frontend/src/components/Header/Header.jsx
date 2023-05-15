@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useContext } from "react";
+import React, { useEffect, useRef, useContext, useState } from "react";
 import { Container, Row, Button } from "reactstrap";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/images/experience.png";
 import "./header.css";
 import { AuthContext } from "../../context/AuthContext";
+import ModalEventsForm from "../ModalEventsForm/ModalEventsForm";
 
 const nav__links = [
 	{
@@ -25,15 +26,23 @@ const nav__links = [
 ];
 
 const Header = () => {
+	const [admin, setAdmin] = useState(false);
 	const headerRef = useRef(null);
 	const menuRef = useRef(null);
 	const navigate = useNavigate();
 	const { user, dispatch } = useContext(AuthContext);
+	
 
 	const logout = () => {
 		dispatch({ type: "LOGOUT" });
 		navigate("/");
 	};
+
+	const adminIsOnline = () => {
+		if(user && user.email === "allan.pazos@uabc.edu.mx"){
+			setAdmin(true);
+		}
+	}
 
 	const stickyHeaderFunc = () => {
 		window.addEventListener("scroll", () => {
@@ -50,6 +59,7 @@ const Header = () => {
 
 	useEffect(() => {
 		stickyHeaderFunc();
+		adminIsOnline();
 
 		return window.removeEventListener("scroll", stickyHeaderFunc);
 	});
@@ -82,6 +92,9 @@ const Header = () => {
 										</NavLink>
 									</li>
 								))}
+								<li>
+								<ModalEventsForm admin={admin}/>
+								</li>
 							</ul>
 						</div>
 						{/* ================================ */}
