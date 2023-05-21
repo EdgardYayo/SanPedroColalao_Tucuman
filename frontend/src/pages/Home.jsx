@@ -18,6 +18,7 @@ import Testimonials from "../components/Testimonial/Testimonials";
 import NewsLetter from "../shared/Newsletter";
 import Chatbot from "../components/Chatbot/Chatbot";
 import Facebook from "../components/Redes/Facebook";
+import Calendar from "../components/Calendar/Calendar";
 
 const Home = () => {
 	return (
@@ -65,8 +66,8 @@ const Home = () => {
 				</Container>
 			</section>
 			{/* ============================================================== */}
-
-			<Events />
+			<Calendar />
+			{/* 	<Events /> */}
 
 			{/* ==================== HERO SECTION START ====================== */}
 			{/* <section>
@@ -119,7 +120,7 @@ const Home = () => {
 
 							<div className="counter__wrapper d-flex align-items-center gap-5">
 								<div className="counter__box">
-									<span style={{ width: "75px"}}>TUC088</span>
+									<span style={{ width: "75px" }}>TUC088</span>
 									<h6>Codigo de Municipio</h6>
 								</div>
 								<div className="counter__box">
