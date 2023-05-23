@@ -18,7 +18,7 @@ import Testimonials from "../components/Testimonial/Testimonials";
 import NewsLetter from "../shared/Newsletter";
 import Chatbot from "../components/Chatbot/Chatbot";
 import Facebook from "../components/Redes/Facebook";
-import Calendar from "../components/Calendar/Calendar";
+/* import Calendar from "../components/Calendar/Calendar"; */
 
 const Home = () => {
 	return (
@@ -66,8 +66,8 @@ const Home = () => {
 				</Container>
 			</section>
 			{/* ============================================================== */}
-			<Calendar />
-			{/* 	<Events /> */}
+			{/* <Calendar /> */}
+			<Events />
 
 			{/* ==================== HERO SECTION START ====================== */}
 			{/* <section>
@@ -195,7 +195,7 @@ const Home = () => {
 					</Row>
 				</Container>
 			</section>
-			<NewsLetter />
+			{/* <NewsLetter /> */}
 			<Chatbot />
 		</>
 	);

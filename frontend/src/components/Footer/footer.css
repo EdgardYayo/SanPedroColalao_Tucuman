@@ -6,8 +6,12 @@
 	--font-name: "Montserrat", sans-serif;
 	--subtitle-font-name: "Island Moments", cursive;
 }
+.col {
+	background-color: var(--secondary-color);
+}
 
 .footer {
+	border-top: 10px solid var(--primary-color);
 	padding-top: 70px;
 	padding-bottom: 30px;
 }

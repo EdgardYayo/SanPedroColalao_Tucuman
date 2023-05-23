@@ -29,9 +29,7 @@ const Tours = () => {
 			<CommonSection title={"Todos los Lugares"} />
 			<section>
 				<Container>
-					<Row>
-						<SearchBar />
-					</Row>
+					<Row>{/* <SearchBar /> */}</Row>
 				</Container>
 			</section>
 
@@ -65,7 +63,7 @@ const Tours = () => {
 					)}
 				</Container>
 			</section>
-			<Newsletter />
+			{/* <Newsletter /> */}
 		</>
 	);
 };

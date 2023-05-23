@@ -20,8 +20,8 @@ const nav__links = [
 		display: "Lugares",
 	},
 	{
-		path:"/news",
-		display: "Noticias"
+		path: "/news",
+		display: "Noticias",
 	},
 ];
 
@@ -31,7 +31,6 @@ const Header = () => {
 	const menuRef = useRef(null);
 	const navigate = useNavigate();
 	const { user, dispatch } = useContext(AuthContext);
-	
 
 	const logout = () => {
 		dispatch({ type: "LOGOUT" });
@@ -40,10 +39,15 @@ const Header = () => {
 	};
 
 	const adminIsOnline = () => {
-		if(user && user.email === "allan.pazos@uabc.edu.mx"){
+		if (
+			user &&
+			(user.email === "allan.pazos@uabc.edu.mx" ||
+				user.email === "dhannychocolateteamo@gmail.com" ||
+				user.email === "cerveceria.herr.vilem@gmail.com")
+		) {
 			setAdmin(true);
 		}
-	}
+	};
 
 	const stickyHeaderFunc = () => {
 		window.addEventListener("scroll", () => {
@@ -94,7 +98,7 @@ const Header = () => {
 									</li>
 								))}
 								<li>
-								<ModalEventsForm admin={admin}/>
+									<ModalEventsForm admin={admin} />
 								</li>
 							</ul>
 						</div>

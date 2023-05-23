@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./tour-card.css";
+import imgalt from "../assets/images/img-alt.jpg";
 // import calculateAvgRating from "../utils/avgRating";
 
 const TourCard = ({ tour }) => {
@@ -13,7 +14,7 @@ const TourCard = ({ tour }) => {
 		<div className="tour__card">
 			<Card>
 				<div className="tour__img">
-					<img src={photo} alt="tour-img" />
+					<img src={photo || imgalt} alt="tour-img" />
 					{/* {featured && <span>Presentado</span>} */}
 				</div>
 
@@ -37,9 +38,7 @@ const TourCard = ({ tour }) => {
 					</h5>
 
 					<div className="card__bottom d-flex align-items-center justify-content-between mt-3">
-						<h5>
-							{category}
-						</h5>
+						<h5>{category}</h5>
 
 						{/* <button className=' booking__btn'>
                      <Link to={`/tours/${_id}`}>Book Now</Link>
